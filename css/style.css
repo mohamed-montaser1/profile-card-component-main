@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  overflow: hidden;
+  background-color: var(--dark-cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.top-circle {
+  position: absolute;
+  top: -50%;
+  left: -20%;
+}
+
+.bottom-circle {
+  position: absolute;
+  bottom: -50%;
+  right: -20%;
+}
+
+@media (max-width: 1511px) {
+  .top-circle {
+    left: -40%;
+    top: -70%;
+  }
+  .bottom-circle {
+    bottom: -70%;
+    right: -40%;
+  }
+}
+
+@media (max-width: 1149px) {
+  .top-circle {
+    left: -60%;
+    top: -120%;
+  }
+  .bottom-circle {
+    bottom: -120%;
+    right: -60%;
+  }
+}
+
+.container {
+  --size: 450px;
+  background-color: white;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 30px;
+  position: relative;
+}
+
+.container .ptrn {
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+}
+
+.container .avatar {
+  --size: 100px;
+  border-radius: 50%;
+  display: block;
+  margin-inline: auto;
+  outline: 6px solid white;
+  translate: 0 -50%;
+  width: var(--size);
+  height: var(--size);
+}
+
+.container .info {
+  width: fit-content;
+  margin-inline: auto;
+  transform: translateY(-50%);
+}
+
+.container .info div {
+  display: flex;
+  gap: 10px;
+}
+
+.container .info div h1 {
+  font-size: 25px;
+}
+
+.container .info div span {
+  font-size: 25px;
+  color: var(--dark-gray);
+}
+
+.container .info small {
+  display: block;
+  text-align: center;
+  font-size: 19px;
+  color: var(--dark-gray);
+}
+
+.container .stats::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  width: 100%;
+  background: var(--dark-gray);
+}
+
+.container .stats {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
+  border-radius: 0 0 30px 30px;
+  gap: 30px;
+}
+
+.container .stats .card h2 {
+  text-align: center;
+  font-size: 24px;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.container .stats .card small {
+  color: var(--dark-gray);
+  text-align: center;
+  letter-spacing: 1px;
+  display: block;
+  font-size: 16px;
+}
